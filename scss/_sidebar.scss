@@ -1,0 +1,58 @@
+//Sidebar styles
+
+#sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: block;
+    padding: 70px 20px 20px;
+    background-color: $sec;
+    color: #ccc;
+    border-right: 1px solid #1a1a1a;
+    @media all and (max-width: $phone) {
+        left: -1000px;
+    }
+    ul {
+        padding-left: 0;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    li {
+        list-style-type: none;
+        margin: 5px 0 5px 0;
+        padding: 3px 0 3px 35px;
+    }
+    li:hover {
+        background: $main;
+        cursor: pointer;
+    }
+    .active {
+        background: $main;
+    }
+    #start{
+        display: block;
+    }
+    #back{
+        display: none;
+        a{
+            text-decoration: none;
+            color: $accent;
+        }
+        a:hover {
+            color: #ccc;
+        }
+    }
+    #github {
+        margin-top: 50px;
+        a {
+            text-decoration: none;
+            color: $main;
+        }
+        a:hover {
+            color: #ccc;
+        }
+    }
+}

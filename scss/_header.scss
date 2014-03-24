@@ -1,0 +1,70 @@
+//Header Styles
+ #nav {
+    min-height: 55px;
+    background: $main;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 5;
+    #credit {
+        float: right;
+        margin-top: 20px;
+        width: 300px;
+        color: $sec;
+        font-weight: 600;
+        a {
+            text-decoration: none;
+            color: $accent;
+        }
+        @media all and (max-width: $spec) {
+            margin: 0 auto;
+            float: left;
+        }
+    }
+    #title {
+        padding: 15px;
+        font-size: 2em;
+        color: $accent;
+        float: left;
+        font-weight: 800;
+        a {
+            text-decoration: none;
+            color: $accent;
+        }
+        @media all and (max-width: $spec) {
+            padding: 15px;
+        }
+        @media all and (max-width: $phone) {
+            padding: 0;
+            clear: right;
+        }
+    }
+    #mobile {
+        display: none;
+        @media all and (max-width: $phone) {
+            display: block;
+            float: left;
+            margin: 15px;
+            background: $sec;
+            border: solid 1px $sec;
+            position: relative;
+            height: 20px;
+            padding: 6px 8px;
+            &:hover {
+                background: transparent;
+                .icon {
+                    background: $sec;
+                }
+            }
+            .icon {
+                display: block;
+                width: 22px;
+                height: 3px;
+                margin-bottom: 5px;
+                background: $accent;
+            }
+        }
+    }
+}

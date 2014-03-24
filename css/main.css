@@ -1,0 +1,119 @@
+@import url(reset.css);
+body { font-family: 'Source Sans Pro', sans-serif; background: #d5d6d5; }
+
+#nav { min-height: 55px; background: #1f5d1c; display: block; top: 0; left: 0; right: 0; position: fixed; z-index: 5; }
+#nav #credit { float: right; margin-top: 20px; width: 300px; color: #242424; font-weight: 600; }
+#nav #credit a { text-decoration: none; color: #cccccc; }
+@media all and (max-width: 660px) { #nav #credit { margin: 0 auto; float: left; } }
+#nav #title { padding: 15px; font-size: 2em; color: #cccccc; float: left; font-weight: 800; }
+#nav #title a { text-decoration: none; color: #cccccc; }
+@media all and (max-width: 660px) { #nav #title { padding: 15px; } }
+@media all and (max-width: 767px) { #nav #title { padding: 0; clear: right; } }
+#nav #mobile { display: none; }
+@media all and (max-width: 767px) { #nav #mobile { display: block; float: left; margin: 15px; background: #242424; border: solid 1px #242424; position: relative; height: 20px; padding: 6px 8px; }
+  #nav #mobile:hover { background: transparent; }
+  #nav #mobile:hover .icon { background: #242424; }
+  #nav #mobile .icon { display: block; width: 22px; height: 3px; margin-bottom: 5px; background: #cccccc; } }
+
+#sidebar { position: fixed; width: 200px; height: 100%; top: 0; left: 0; bottom: 0; display: block; padding: 70px 20px 20px; background-color: #242424; color: #ccc; border-right: 1px solid #1a1a1a; }
+@media all and (max-width: 767px) { #sidebar { left: -1000px; } }
+#sidebar ul { padding-left: 0; margin-left: -20px; margin-right: -20px; }
+#sidebar li { list-style-type: none; margin: 5px 0 5px 0; padding: 3px 0 3px 35px; }
+#sidebar li:hover { background: #1f5d1c; cursor: pointer; }
+#sidebar .active { background: #1f5d1c; }
+#sidebar #start { display: block; }
+#sidebar #back { display: none; }
+#sidebar #back a { text-decoration: none; color: #cccccc; }
+#sidebar #back a:hover { color: #ccc; }
+#sidebar #github { margin-top: 50px; }
+#sidebar #github a { text-decoration: none; color: #1f5d1c; }
+#sidebar #github a:hover { color: #ccc; }
+
+#content { margin-left: 260px; margin-top: 85px; }
+@media all and (max-width: 767px) { #content { margin-left: auto; margin-right: auto; } }
+@media all and (max-width: 767px) { #content #intro { margin-left: 10px; } }
+#content #stuff { width: 100%; }
+@media all and (max-width: 767px) { #content #stuff { margin-left: 10px; } }
+#content #game { width: 570px; float: left; overflow-y: auto; }
+#content #game img { width: 40%; margin: 0 auto 20px auto; display: block; }
+@media all and (max-width: 1269px) { #content #game { width: 50%; } }
+@media all and (max-width: 767px) { #content #game { width: 100%; float: none; max-height: none; margin-bottom: 20px; } }
+#content #title { margin-bottom: 10px; }
+@media all and (max-width: 767px) { #content #title { margin: 0 10px 10px 10px; } }
+@media all and (max-width: 767px) { #content #about { display: none; } }
+#content #about img { width: 90%; }
+#content #videos { float: left; margin-left: 10px; width: 415px; overflow-y: auto; }
+#content #videos iframe { width: 400px; height: 320px; }
+@media all and (max-width: 1269px) { #content #videos iframe { width: 100%; } }
+@media all and (max-width: 1269px) { #content #videos { width: 45%; margin-left: 0; } }
+@media all and (max-width: 767px) { #content #videos { margin-left: -5px; width: 100%; max-height: none; } }
+
+/* 
+CSS Loader. Credit: http://codepen.io/tmyg/pen/bwLom 
+==================================================================
+*/
+#spin { width: 50px; height: 50px; background: #aaa; margin: 0 auto; position: relative; display: none; }
+
+#spin:after { position: absolute; content: ""; width: 80%; height: 80%; border-radius: 100%; background: #242424; top: 10%; left: 10%; }
+
+#spin span em { background: #1f5d1c; -webkit-animation-duration: 3s; }
+
+/* No need to edit below this line */
+@-webkit-keyframes rotate-rt { 0% { -webkit-transform: rotate(0deg); }
+  25% { -webkit-transform: rotate(180deg); }
+  50% { -webkit-transform: rotate(180deg); }
+  75% { -webkit-transform: rotate(360deg); }
+  100% { -webkit-transform: rotate(360deg); } }
+
+@-webkit-keyframes rotate-lt { 0% { -webkit-transform: rotate(0deg); }
+  25% { -webkit-transform: rotate(0deg); }
+  50% { -webkit-transform: rotate(180deg); }
+  75% { -webkit-transform: rotate(180deg); }
+  100% { -webkit-transform: rotate(360deg); } }
+
+#spin { border-radius: 100%; position: relative; }
+
+#spin span { width: 50%; height: 100%; overflow: hidden; position: absolute; }
+
+#spin span:first-child { left: 0; }
+
+#spin span:last-child { left: 50%; }
+
+#spin span em { border-radius: 999px; position: absolute; width: 100%; height: 100%; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; }
+
+#spin span:first-child em { left: 100%; border-top-left-radius: 0; border-bottom-left-radius: 0; -webkit-animation-name: rotate-lt; -webkit-transform-origin: 0 50%; }
+
+#spin span:last-child em { left: -100%; border-top-right-radius: 0; border-bottom-right-radius: 0; -webkit-animation-name: rotate-rt; -webkit-transform-origin: 100% 50%; }
+
+.spinner { width: 50px; height: 50px; background: #aaa; margin: 0 auto; position: relative; display: block; }
+
+.spinner:after { position: absolute; content: ""; width: 80%; height: 80%; border-radius: 100%; background: #fff; top: 10%; left: 10%; }
+
+.spinner span em { background: #1f5d1c; -webkit-animation-duration: 3s; }
+
+/* No need to edit below this line */
+@-webkit-keyframes rotate-rt { 0% { -webkit-transform: rotate(0deg); }
+  25% { -webkit-transform: rotate(180deg); }
+  50% { -webkit-transform: rotate(180deg); }
+  75% { -webkit-transform: rotate(360deg); }
+  100% { -webkit-transform: rotate(360deg); } }
+
+@-webkit-keyframes rotate-lt { 0% { -webkit-transform: rotate(0deg); }
+  25% { -webkit-transform: rotate(0deg); }
+  50% { -webkit-transform: rotate(180deg); }
+  75% { -webkit-transform: rotate(180deg); }
+  100% { -webkit-transform: rotate(360deg); } }
+
+.spinner { border-radius: 100%; position: relative; }
+
+.spinner span { width: 50%; height: 100%; overflow: hidden; position: absolute; }
+
+.spinner span:first-child { left: 0; }
+
+.spinner span:last-child { left: 50%; }
+
+.spinner span em { border-radius: 999px; position: absolute; width: 100%; height: 100%; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; }
+
+.spinner span:first-child em { left: 100%; border-top-left-radius: 0; border-bottom-left-radius: 0; -webkit-animation-name: rotate-lt; -webkit-transform-origin: 0 50%; }
+
+.spinner span:last-child em { left: -100%; border-top-right-radius: 0; border-bottom-right-radius: 0; -webkit-animation-name: rotate-rt; -webkit-transform-origin: 100% 50%; }
