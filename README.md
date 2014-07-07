@@ -5,6 +5,6 @@ Upcoming video game releases on next gen consoles. Pulling GiantBomb API data us
 
 Note: I removed my API key so you'll need your own if you pull it down.
 
-[Live Project](http://sulley.cah.ucf.edu/~ar400093/dig4503/assignments/assignment02/page_index.html)
+[Live Project](http://test.arissabrown.com/projects/next-gen/page_index.html)
 
 
